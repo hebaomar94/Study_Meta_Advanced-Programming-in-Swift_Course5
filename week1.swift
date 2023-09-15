@@ -1,10 +1,10 @@
-enum Desser {
+enum Dessert {
     case tirmaisu
     case tea
     case water
 }
 
-let fav = Desser.tirmaisu
+let fav = Dessert.tirmaisu
 switch fav {
 case.tirmaisu:
     print("tir is my fav")
