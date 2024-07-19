@@ -1,0 +1,43 @@
+import UIKit
+
+class vegtables {
+    //computed
+    var primaryColor: String {
+        
+        "Green"
+    }
+    
+    func sing () {
+        print ("yes iam pretty vegtables")
+    }
+}
+
+class carrot : vegtables {
+    
+    override var primaryColor: String {
+        "orange"
+    }
+    
+    override func sing() {
+        print ("yayayyayayayyay ")
+    }
+}
+
+class banana : vegtables {
+    override var primaryColor: String {
+        "yallow"
+    }
+    
+    override func sing() {
+        print ("lolololololo ")
+    }
+    
+}
+
+let carrotn = carrot()
+let bananaN = banana()
+
+print (carrotn.primaryColor , bananaN.primaryColor)
+
+carrotn.sing()
+bananaN.sing()
