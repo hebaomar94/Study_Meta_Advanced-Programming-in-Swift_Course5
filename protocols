@@ -1,0 +1,43 @@
+//protocols
+
+protocol Employee {
+    var name: String {get}
+    var daysWork: Int {get set}
+    func excute()
+    func danceTo(lyrics:String)
+    
+}
+
+protocol GoodChef {
+    func cookGoodChef()
+}
+
+protocol GreatChef {
+    func cookGreatChef()
+}
+
+protocol ExcellentChef {
+    func cookExcellentChef()
+}
+
+class Person {
+    // Implementing the ExcellentChef protocol
+    func cookExcellentChef() {
+        // Implementation of cookExcellentChef
+    }
+    
+    // Implementing the GreatChef protocol
+    func cookGreatChef() {
+        // Implementation of cookGreatChef
+    }
+    
+    // Implementing the GoodChef protocol
+    func cookGoodChef() {
+        // Implementation of cookGoodChef
+    }
+}
+
+// Extending Person to conform to protocols
+extension Person: ExcellentChef {}
+extension Person: GreatChef {}
+extension Person: GoodChef {}
