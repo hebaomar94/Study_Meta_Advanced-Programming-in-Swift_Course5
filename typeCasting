@@ -1,5 +1,9 @@
+
+// basic customer class.
 class Customer {
 }
+
+//PeanutAllergyCustomer: A subclass of Customer
 
 class PeanutAllergyCustomer: Customer {
     let avoidDishes = [
@@ -12,7 +16,11 @@ class PeanutAllergyCustomer: Customer {
     }
 }
 
+//An empty array customers is created to hold Customer objects.
+
 var customers: [Customer] = []
+
+//A loop runs 5 times to create 5 customers.
 for _ in 0..<5 {
     let randomNumber = Int.random(in: 0...1)
     let customer: Customer
@@ -40,3 +48,44 @@ for customer in customers {
         peanutAllergyCustomer.avoid()
     }
 }
+
+
+
+//another_way
+
+class Customer {
+}
+
+class PeanutAllergyCustomer: Customer {
+    let avoidDishes = ["dishes1", "dishes2"]
+    
+    func avoid() {
+        print("Call 911")
+    }
+}
+
+var customers: [Customer] = []
+
+// Create 5 customers randomly
+for _ in 0..<5 {
+    if Bool.random() {
+        customers.append(PeanutAllergyCustomer())
+    } else {
+        customers.append(Customer())
+    }
+}
+
+// Print messages for each customer
+for customer in customers {
+    if let peanutAllergyCustomer = customer as? PeanutAllergyCustomer {
+        print("Welcome! Note that some foods should be avoided.")
+        print("Dishes to avoid:")
+        for dish in peanutAllergyCustomer.avoidDishes {
+            print(dish)
+        }
+        peanutAllergyCustomer.avoid()
+    } else {
+        print("Hello!")
+    }
+}
+
