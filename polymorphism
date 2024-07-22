@@ -1,0 +1,22 @@
+//polymorphism
+
+class New  {
+    func gradient () {
+        print ("tomato","garger")
+    }
+}
+
+final class NewOne: New {
+    override func gradient() {
+        print ("before")
+        super.gradient()
+        print ("after")
+    }
+  
+}
+
+let new = New()
+let newone = NewOne()
+
+new.gradient()
+newone.gradient()
